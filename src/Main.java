@@ -12,7 +12,7 @@ public class Main{
 
     private Main(String Test,double Test_double){
         this.Test=Test;
-        this.Test_double=Test_double;//constructor can be private
+        this.Test_double=Test_double;//constructor can be private.
     }
 
     void main(){//this main is not static and instead of one argument (args) it takes none-different signatures, also if public is not declared it is then default
