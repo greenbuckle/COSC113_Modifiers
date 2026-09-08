@@ -7,9 +7,9 @@ public class student {
 //public= accessible from everywhere
 //private= accessible from inside the class
 
-public String FN;
-public String LN;//access modifiers are the default-if nothing is declared
-public int Sid;
+private String FN;
+private String LN;//access modifiers are the default-if nothing is declared
+private int Sid;
 
 //public double gpa;
 //Concept- Encapsulation=  Controlling the access of attributes and methods
@@ -33,11 +33,10 @@ this.Sid = Sid;
 student(String FN, String LN){
 this.FN=FN;
 this.LN=LN;
-
 }
+
 student (String FN,  int Sid, String LN){
 this(FN,LN);
-
 }
 
 public String getFN() {
@@ -46,6 +45,9 @@ return FN;
 
 public void setFN(String FN) {
 this.FN = FN;
+
+//this.gpa=3.5;
+this.setGpa(3.8);//possible but not a good practice
 }
 
 public String getLN() {
