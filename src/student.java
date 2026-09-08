@@ -1,24 +1,41 @@
-public class Student{
-String FN;
-String LN;
-int Sid;
+public class student {
+//all the attributes should be private
 
-Student(){
+//java uses four access modifiers - public, private, protected, -( default)
+//access modifiers are applicable to attributes, constrictors, methods, setters and getters
+
+//public= accessible from everywhere
+//private= accessible from inside the class
+
+public String FN;
+public String LN;//access modifiers are the default-if nothing is declared
+public int Sid;
+
+//public double gpa;
+//Concept- Encapsulation=  Controlling the access of attributes and methods
+private double gpa;
+
+
+
+student(){
 this.FN="No First Name";
-this.LN="No Last name";
-this.Sid=0;}
+this.LN="No Last name";//access modifier is default
+this.Sid=0;
+this.gpa=0.0;
+}
 
-Student(String FN, String LN, int Sid) {
+student(String FN, String LN, int Sid) {
 this.FN = FN;
 this.LN = LN;
-this.Sid = Sid;}
+this.Sid = Sid;
+}
 
-Student(String FN, String LN){
+student(String FN, String LN){
 this.FN=FN;
 this.LN=LN;
 
 }
-Student (String FN,  int Sid, String LN){
+student (String FN,  int Sid, String LN){
 this(FN,LN);
 
 }
@@ -47,30 +64,18 @@ public void setSid(int sid) {
 Sid = sid;
 }
 
-public static void main (String[]args){
+public double getGpa() {
+return gpa;
+}
 
-Student s1= new Student("thomas","jefferson");
-System.out.println(s1.FN);
-System.out.println(s1.LN);
-System.out.println(s1.Sid);
-
-Student s2=new Student();
-System.out.println(s2.FN);
-System.out.println(s2.LN);
-System.out.println(s2.Sid);
-
-Student s3=new Student("Charles","Chaplin",800592);
-System.out.println(s3.FN);
-System.out.println(s3.LN);
-System.out.println(s3.Sid);
-
-Student s4=new Student();
-s4.FN="Juan";
-s4.setLN("Johnson");
-s4.setSid(55662);
-System.out.println(s4.getFN());
-System.out.println(s4.getLN());
-System.out.println(s4.getSid());
-
+public void setGpa(double gpa) {
+//this.gpa = gpa;
+if(gpa>=0.0&&gpa<=4.0){
+this.gpa=gpa;
+}else{
+System.out.println("Invalid GPA Value");
 }
 }
+}
+
+
