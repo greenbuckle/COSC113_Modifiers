@@ -1,5 +1,5 @@
 public class student {
-//all the attributes should be private
+//all the attributes should be private/
 
 //java uses four access modifiers - public, private, protected, -( default)
 //access modifiers are applicable to attributes, constrictors, methods, setters and getters
